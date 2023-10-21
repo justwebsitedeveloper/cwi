@@ -1,0 +1,50 @@
+.reach-out {
+  padding: 120px 0;
+  background: #f9f9f9 url(./../img/home/book.png) no-repeat;
+  background-size: contain;
+  background-position: bottom -100px left -125px;
+}
+.cont-title {
+  font-size: 28px !important;
+}
+
+.load-overlay {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.326);
+  z-index: 9999999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &.active{
+    display: flex;
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: $layout-breakpoint-small) {
+  .reach-out {
+    background: url();
+    margin: 0;
+  }
+  .reach-out {
+    padding: 40px 0;
+  }
+  form {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-testimonials) {
+  .about-testimonials {
+    padding: 60px 0 0 0;
+  }
+}

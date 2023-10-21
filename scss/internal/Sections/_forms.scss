@@ -1,0 +1,121 @@
+form {
+  margin-top: 50px;
+
+  .form-control {
+    width: 100%;
+    border: 1px solid $body-color;
+    font-size: 16px;
+    padding: 12px 10px;
+    border-radius: 9px;
+    height: auto;
+
+    &.error{
+      box-shadow: 0px 3px 10px #ffe8e8;
+      border-color: #ff0000;
+    }
+
+    &.valid{
+      box-shadow: 0px 3px 10px #e8ffeb;
+      border-color: $tertiary-color;
+    }
+  }
+
+  textarea.form-control {
+    height: 136px;
+    resize: none;
+  }
+
+  label {
+    @include poppins-regular();
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .form-row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .form-row > .col,
+  .form-row > [class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  // .custom-checkbox {
+  //   margin-top: -15px;
+  // }
+
+  .custom-control-label {
+    font-size: 11px;
+    left: 20px;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: $body-color;
+    background-color: #fff;
+  }
+
+  .custom-control-label::before {
+    position: absolute;
+    top: 0;
+    left: -43px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: $body-color solid 1px;
+  }
+
+  .custom-checkbox
+    .custom-control-input:checked
+    ~ .custom-control-label::after {
+    opacity: 1;
+  }
+
+  .custom-control-label::after {
+    position: absolute;
+    top: 8px;
+    left: -35px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $tertiary-color;
+    content: "";
+    transition: all ease .5s;
+    opacity: 0;
+  }
+
+  label.error{
+    font-size: 11px;
+    position: absolute;
+    bottom: -20px;
+    left: 25px;
+    color: #ff0000;
+    margin: 0;
+  }
+}
+
+
+.form-submit{
+    text-align: center;
+    margin-top: 45px;
+
+    button {
+        background-color: $tertiary-color;
+        color:  $white;
+        @include poppins-bold();
+        font-size: 14px;
+        outline: none;
+        border: none;
+        border-radius: 9px;
+        min-width: 175px;
+        padding: 15px 0;
+    }
+}
+

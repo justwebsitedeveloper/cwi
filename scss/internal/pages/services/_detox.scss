@@ -1,0 +1,119 @@
+.detox-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detox-card {
+  border: none;
+  border-radius: 8px;
+  max-width: 230px;
+  box-shadow: 0px 3px 10px rgba($color: #23bbbf, $alpha: 0.1);
+  border: 1px solid rgba($color: #23bbbf, $alpha: 0.3);
+
+  &__body {
+    padding: 30px 25px;
+  }
+
+  &__title {
+    @include poppins-bold();
+    font-size: 16px;
+    margin-bottom: 30px;
+    min-height: 40px;
+  }
+
+  &__content {
+    @include manjiri-regular();
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-big) {
+  .detox-card {
+    margin-top: 20px;
+  }
+  .service-section__content--cover {
+    justify-content: flex-start;
+  }
+  .service-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .detox-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+  }
+  .detox-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .service-section__content--cover {
+    padding-top: 30px;
+  }
+  .detox_pd,
+  .hormone_pd,
+  .hydrotherapy_pd,
+  .hifu-img,
+  .hifu,
+  .live-younger_pd {
+    padding-top: 25px;
+  }
+  .high-intensity,
+  .hormone,
+  .hydrotherapy,
+  .detox {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .service-section__content--cover {
+    padding-top: 0px;
+  }
+  .service-section {
+    padding: 10px 0;
+  }
+  .detox-card {
+    margin-top: 15px;
+  }
+  .detox_pd,
+  .hormone_pd,
+  .hydrotherapy_pd,
+  .hifu-img,
+  .hifu,
+  .live-younger_pd {
+    padding-top: 5px;
+  }
+  .nutrient_pd,
+  .plasma_pd,
+  .therapy_pd,
+  .thermiva_pd,
+  .weight_loss_pd {
+    padding-top: 10px;
+  }
+  .nutrient,
+  .plasma,
+  .therapy,
+  .thermiva,
+  .weight_loss {
+    display: flex;
+    flex-direction: column-reverse;    
+  }
+}
+
+// common
+@media (max-width: $layout-breakpoint-small) {
+  .service-section__title {
+    font-size: 24px;
+  }
+  .services-footer a {
+    font-size: 20px;
+  }
+  .service-section__para {
+    font-size: 15px;
+  }
+}

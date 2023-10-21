@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,800;1,500&display=swap");
+
+@mixin manjiri {
+  font-family: "Manjari", sans-serif;
+}
+
+@mixin poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+// Manjiri
+
+@mixin manjiri-regular {
+  @include manjiri();
+  font-weight: 400;
+}
+
+@mixin manjiri-bold {
+  @include manjiri();
+  font-weight: 700;
+}
+
+// Poppins
+
+@mixin poppins-light {
+  @include poppins();
+  font-weight: 300;
+}
+
+@mixin poppins-regular {
+  @include poppins();
+  font-weight: 400;
+}
+
+@mixin poppins-medium {
+  @include poppins();
+  font-weight: 500;
+}
+
+@mixin poppins-bold {
+  @include poppins();
+  font-weight: 800;
+}

@@ -1,0 +1,50 @@
+.banner {
+  .carousel-item {
+    height: 100vh;
+    max-height: 578px;
+    min-height: 600px;
+    padding-top: 148px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    overflow: hidden;
+  }
+
+  .carousel-content {
+    color: $white;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: calc(50% + 74px);
+    transform: translateY(-50%);
+    text-align: center;
+
+    &__inner{
+        max-width: 520px;
+        margin: auto;
+    }
+
+    &__lead{
+        font-size: 18px;
+        @include poppins-medium();
+        color: $secondary-color;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__title{
+        font-size: 40px;
+        @include poppins-light();
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include manjiri-regular();
+        font-size: 16px;
+        margin: 0;
+    }
+  }
+}

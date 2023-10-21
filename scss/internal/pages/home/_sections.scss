@@ -1,0 +1,558 @@
+// COMMON---------
+
+@media (max-width: $layout-breakpoint-small) {
+  .section__cta {
+    font-size: 15px;
+  }
+  .section__title {
+    font-size: 30px;
+  }
+}
+
+// wings of our life
+
+.home-about {
+  padding: 130px 0 70px;
+}
+@media (max-width: $layout-breakpoint-medium) {
+  .home-about {
+    padding: 60px 0 60px;
+  }
+  .section__cta {
+    margin-top: 0;
+  }
+  .about-img {
+    padding-top: 50px;
+  }
+}
+@media (max-width: $layout-breakpoint-mobile) {
+  .section__pre {
+    margin-bottom: 5px;
+  }
+}
+
+// our service
+
+.home-services {
+  padding: 100px 0;
+  background: url(./../img/home/services.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__accordian {
+    position: relative;
+    min-width: 42px;
+    overflow: hidden;
+    max-height: 450px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__card {
+    position: relative;
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+      float: left;
+      width: 42px;
+      height: 100%;
+      transition: all ease 0.5s;
+      margin: 0;
+      background-blend-mode: overlay;
+      background-size: cover !important;
+    }
+
+    label:last-child {
+      margin-right: 0;
+    }
+
+    input:checked {
+      & ~ label {
+        width: 0;
+        opacity: 0;
+      }
+
+      & ~ article {
+        max-width: 400px;
+        opacity: 1;
+        width: 400px;
+      }
+    }
+
+    &-title {
+      @include poppins-light();
+      font-size: 16px;
+      color: $white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-left: 30px;
+      margin-bottom: 30px;
+      transform-origin: 0 100%;
+      transform: rotate(270deg);
+      z-index: 0;
+      min-width: 420px;
+      cursor: pointer;
+    }
+
+    &-content {
+      background-color: $white;
+      width: 0;
+      overflow: hidden;
+      -webkit-transition: width 0.25s linear, opacity 0.2s linear;
+      transition: width 0.25s linear, opacity 0.3s linear;
+      position: relative;
+      margin-bottom: 0;
+      padding: 0;
+      opacity: 0;
+      float: left;
+      height: 100%;
+
+      &:hover .home-services__card-content-cta img {
+        -webkit-animation: arrow 0.6s 4 alternate ease-in-out;
+        animation: arrow 0.6s 4 alternate ease-in-out;
+      }
+
+      &-inner {
+        padding: 55px 35px 40px 35px;
+        color: $body-color;
+      }
+
+      &-title {
+        @include poppins-bold();
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+
+      &-body {
+        @include manjiri-regular();
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+    }
+
+    // &.active {
+    //   cursor: auto;
+
+    //   padding: 0;
+
+    //   .home-services__card {
+    //     &-content {
+    //       display: block;
+    //     }
+
+    //     &-title {
+    //       display: none;
+    //     }
+    //   }
+    // }
+  }
+}
+@media (max-width: $layout-breakpoint-big) {
+  .home-services {
+    &__card {
+      input:checked {
+        & ~ article {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $layout-breakpoint-medium) {
+  .home-services {
+    padding: 50px 0;
+    &__card {
+      input:checked {
+        & ~ article {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $layout-breakpoint-small) {
+  .home-services__accordian {
+    max-height: 100%;
+    flex-direction: column;
+  }
+  .home-services__card label {
+    width: 100%;
+    height: 42px;
+  }
+  .home-services__card-title {
+    bottom: auto;
+    left: 0;
+    top: 15px;
+    transform: rotate(0);
+  }
+  .home-services__card input:checked ~ article {
+    max-width: 100%;
+    width: 100%;
+    height: 515px;
+  }
+  .home-services__card-content {
+    transition: width 0.25s linear, height 0.25s linear, opacity 0.3s linear;
+    height: 0;
+  }
+}
+
+@media (max-width: $layout-breakpoint-mobile) {
+  .home-services__card-title {
+    font-size: 11px;
+  }
+  .home-services__card input:checked ~ article {
+    height: 410px;
+  }
+}
+
+// next gen organic cell
+
+@media (max-width: $layout-breakpoint-big) {
+  .home-prods__display {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .home-prods {
+    padding: 60px 0 !important;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .home-prods__display {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .home-prods__display-prod {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}
+
+// Products
+
+.home-prods {
+  padding: 85px 0;
+
+  .home-prods__display {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    &-prod {
+      min-width: 185px;
+      width: 185px;
+      height: 300px;
+      text-align: center;
+      padding: 20px 15px;
+      border: solid thin $secondary-color;
+      border-radius: 8px;
+      box-shadow: 0px 3px 10px #23bbbf29;
+      position: relative;
+
+      &-tag {
+        position: absolute;
+        right: -1px;
+        top: 25px;
+        color: $white;
+        background-color: $secondary-color;
+        padding: 8px 5px 4px 15px;
+        border-radius: 25px 0 0 25px;
+        @include manjiri-regular();
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      img {
+        margin-top: 40px;
+      }
+
+      &-content {
+        color: $body-color;
+
+        h4 {
+          margin-top: 25px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          @include manjiri-regular();
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// News
+
+.home-news {
+  padding: 60px 0 50px 0;
+  background-color: #f9f9f9;
+}
+
+.home-news__cards {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.home-news__card {
+  max-width: 350px;
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;   
+
+  .card-img-top {
+    height: 250px;
+  }
+
+  &-body {
+    padding: 20px 20px 40px 20px;
+    position: relative;
+    color: $body-color;
+  }
+
+  &-title {
+    @include poppins-bold();
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  &-content {
+    @include manjiri-regular();
+    font-size: 14px;
+    margin-bottom: 50px;
+    height: 150px;
+  }
+
+  &-cta {      
+    @include poppins-bold();
+    color: $body-color;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+
+    img {
+      margin-left: 15px;  
+      transition: all ease 0.5s;
+    }
+
+    &:hover img { 
+      -webkit-animation: arrow 0.6s 4 alternate ease-in-out;
+      animation: arrow 0.6s 4 alternate ease-in-out;
+    }
+  }
+}
+@media (max-width: $layout-breakpoint-big) {
+  .home-news__card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: $layout-breakpoint-medium) {
+  .home-news {
+    padding-top: 60px 0;
+  }
+  .home-news__card-body {
+    padding: 20px 20px 35px 20px;
+  }
+}
+@media (max-width: $layout-breakpoint-small) {
+  .home-news__card .card-img-top {
+    height: 195px;
+  }
+}
+
+// Testimonials
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 40px;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+  outline: none;
+}
+
+.home-testimonials {
+  padding: 75px 0 110px 0;
+
+  &__carousel {
+    margin-top: 40px;
+  }
+}
+
+.home-testimonial {
+  width: 500px;
+  height: 420px;
+  position: relative;
+
+  &::before {
+    content: url(./../img/home/review-element.png);
+    position: absolute;
+    left: -15%;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  &__image {
+    height: 100%;
+    width: 200px;
+    border-radius: 8px 0 0 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    margin-left: 0;
+  }
+
+  &__content {
+    z-index: 2;
+    width: 340px;
+    background-color: $white;
+    position: absolute;
+    padding: 25px 20px 35px 20px;
+    right: 85px;
+    bottom: 35px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border-radius: 16px;
+    color: $body-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 3px;
+      background-color: $secondary-color;
+      right: 25px;
+      top: 0;
+    }
+
+    &-title {
+      @include poppins-bold();
+      font-size: 18px;
+    }
+
+    &-para {
+      @include manjiri-regular();
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-testimonials) {
+  .home-testimonials {
+    padding: 60px 0;
+  }
+  .home-testimonial__image {
+    display: none;
+  }
+  .home-testimonial::before {
+    content: url();
+  }
+  .home-testimonial {
+    height: 260px;
+    width: 300px;
+
+    &__content {
+      width: 310px;
+      padding: 0;
+      left: 0;
+    }
+  }
+  .home-testimonial__content {
+    padding: 25px 20px 35px;
+  }
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 0;
+    padding-bottom: 10px;
+  }
+}
+
+// contact
+
+.home-contact {
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+
+  &::before {
+    content: url(./../img/home/book.png);
+    position: absolute;
+    top: 20px;
+    right: 52%;
+  }
+
+  &__content {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__form {
+    margin-top: 20px;
+    position: relative;
+    @include poppins-regular();
+
+    &-form {
+      height: 0px;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    &-button {
+      border: none;
+      background: transparent;
+      position: absolute;
+      right: 10px;
+      bottom: 6px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-mobile) {
+  .home-contact {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .home-contact {
+    padding: 5px 0 0 0;
+
+    &::before {
+      content: "";
+    }
+    &__content {
+      min-height: 280px;
+      margin-bottom: 80px;
+    }
+  }
+}

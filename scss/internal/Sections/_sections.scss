@@ -1,0 +1,55 @@
+.section {
+  &__pre {
+    @include poppins-medium();
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: $secondary-color;
+    display: block;
+  }
+
+  &__title {
+    @include poppins-light();
+    font-size: 37px;
+  }
+
+  &__title-stub {
+    @include poppins-medium();
+    font-size: 18px;
+    background-color: $tertiary-color;
+    display: inline-block;
+    padding: 2px 8px;
+    color: $white;
+    line-height: 1;
+  }
+
+  &__content {
+    @include manjiri-regular();
+    font-size: 16px;
+    color: $body-color;
+    margin-top: 20px;
+
+    span {
+      color: $secondary-color;
+    }
+  }
+
+  &__cta {
+    @include poppins-bold();
+    color: $body-color;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    cursor: pointer;
+
+    img {
+      margin-left: 15px;
+      transition: all ease 0.5s;
+    }
+
+    &:hover img {
+      -webkit-animation: arrow 0.6s 4 alternate ease-in-out;
+      animation: arrow 0.6s 4 alternate ease-in-out;
+    }
+  }
+}

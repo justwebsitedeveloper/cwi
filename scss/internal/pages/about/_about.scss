@@ -1,0 +1,209 @@
+.about-cwi {
+  padding: 120px 0 110px 0;
+  .section-content span{
+    color: #23BBBF;
+  }
+}
+.cwi-pointer{
+  cursor: pointer;
+}
+.about-goal {
+  padding: 135px 0;
+  background: url(./../img/about/img1.jpg) no-repeat center left -15px;
+  background-size: cover;
+
+  &__content {
+    max-width: 400px;
+    padding-left: 15px;
+  }
+}
+
+.about-board {
+  padding: 115px 0 100px 0;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__member {
+    @include poppins-bold();
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.about-testimonials {
+  background-color: #f9f9f9;
+  padding: 60px 0 70px 0;
+}
+
+.about-contact {
+  padding: 120px 0 85px 0;
+
+  &__content {
+    max-width: 430px;
+    margin: auto;
+  }
+}
+
+.about-modal-header {
+  background: url(./../img/about/overlay/banner.jpg) no-repeat center;
+  background-size: cover;
+  padding: 55px 0;
+
+  &__close {
+    position: absolute;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    right: 35px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-right: 40px;
+    }
+
+    &-text {
+      max-width: 460px;
+
+      h2 {
+        @include poppins-light();
+        font-size: 40px;
+        color: $white;
+      }
+
+      p {
+        font-size: 18px;
+        @include manjiri-regular();
+        text-transform: uppercase;
+        color: $tertiary-color;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.about-modal-body {
+  padding: 50px 0 100px 0;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    width: 90%;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+  }
+}
+
+.about-modal-card {
+  width: calc((100% / 3) - 30px);
+  min-width: 300px;
+  padding: 40px 30px;
+  border: $tertiary-color solid 1px;
+  border-radius: 14px;
+  margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-size: 16px;
+    @include poppins-bold();
+    color: $secondary-color;
+    margin: 15px 0;
+  }
+
+  &__content {
+    font-size: 14px;
+    @include manjiri-regular();
+    color: $body-color;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .about-cwi {
+    padding: 40px 0 60px 0;
+  }
+  .about-contact__content {
+    padding-top: 30px;
+  }
+  .about-board {
+    padding: 60px 0 0 0;
+  }
+  .about-contact {
+    padding: 0 0 50px 0;
+  }
+  .about-goal {
+    padding: 60px 0;
+  }
+  .about-modal-header__content {
+    width: 200px;
+    margin-left: 130px;
+  }
+  .about-modal-header__content-text h2 {
+    font-size: 30px;
+  }
+  .about-modal-header__content-text p {
+    font-size: 18px;
+  }
+  .about-modal-header__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .about-modal-header__content > img {
+    margin-right: 0px;
+  }
+  .about-modal-header__content-text {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .about-contact {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .about-goal__content {
+    padding-right: 15px;
+  }
+  .about-board__header {
+    margin-bottom: 20px;
+  }
+  .about-board__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-board__content > figure {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about_cwi {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about_cwi_pd {
+    padding-top: 30px;
+  }
+  .about-modal-header__close {
+    margin-right: -18px;
+    margin-top: -30px;
+  }
+  .about-modal-card {
+    min-width: 270px;
+  }
+}

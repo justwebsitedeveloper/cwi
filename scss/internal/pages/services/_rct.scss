@@ -1,0 +1,43 @@
+.rct-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.rct-condition {
+  text-align: center;
+  margin: 15px;
+  min-width: 255px;
+  width: calc((100% / 4) - 30px);
+
+  img {
+    margin-bottom: 25px;
+  }
+
+  figcaption {
+    @include manjiri-regular();
+    font-size: 14px;
+    color: $body-color;
+    max-width: 210px;
+    margin: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $layout-breakpoint-big) {
+  .service-section {
+    .rct-condition {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .rct-condition {
+    img {
+      margin-bottom: 0px;
+    }
+  }
+
+}

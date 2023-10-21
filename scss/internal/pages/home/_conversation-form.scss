@@ -1,0 +1,263 @@
+:root {
+  --anim-easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --cf-anim-time: 0.75s;
+  --cf-breakpoint-1: 769px;
+  --cf-color-green: #1ed97b;
+  --cf-color-black: #222222;
+  --cf-color-black-alpha04: rgba(34, 34, 34, 0.4);
+  --cf-color-black-alpha02: rgba(34, 34, 34, 0.2);
+  --cf-color-grey: #ebebeb;
+  --cf-color-white: white;
+}
+      
+.home-contact__form-context {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  ::placeholder {
+    color: var(--cf-color-black);
+    opacity: 0.5;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--cf-color-black);
+    opacity: 0.5;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--cf-color-black);
+    opacity: 0.5;
+  }
+
+  .conversational-form {
+    @include poppins-regular();
+    background: transparent;
+  }
+
+  .conversational-form .conversational-form-inner {
+    padding: 0;
+  }
+
+  .conversational-form:before {
+    background: linear-gradient(
+      to bottom,
+      #f9f9f9 0,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .conversational-form cf-chat scrollable::-webkit-scrollbar {
+    width: 0;
+  }
+  .conversational-form cf-chat-response {
+    padding-top: 0px;
+    min-width: 200px;
+  }
+  @media (min-width: var(--cf-breakpoint-1)) {   
+    .conversational-form cf-chat-response {
+      max-width: 83%;
+    }
+  }
+  .conversational-form cf-chat-response text {
+    min-height: 42px;
+    font-size: 13px;
+  }
+  .conversational-form cf-chat-response thumb {
+    display: none;
+  }
+  .conversational-form cf-chat-response thumb > p {
+    background-color: var(--cf-color-grey);
+  }
+  .conversational-form cf-chat-response:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  .conversational-form cf-chat-response.robot {
+    padding-left: 50px;
+
+    thumb {
+      display: block;
+      width: 38px;
+      height: 38px;
+      background-image: url(./../img/home/doctor.png) !important;
+      background-size: cover !important;
+    }
+  }
+  .conversational-form cf-chat-response.robot text {
+    color: var(--cf-color-black);
+  }
+  .conversational-form cf-chat-response.robot text > p { 
+    border-radius: 4px 20px 20px 20px;
+    background: var(--cf-color-grey);
+  }
+  .dark-theme
+    .conversational-form
+    cf-chat-response.robot  
+    text
+    > p:not(:only-child):first-child {
+    border-radius: 20px 20px 20px 4px;
+  }
+  .dark-theme
+    .conversational-form
+    cf-chat-response.robot
+    text
+    > p:not(:only-child):last-child {
+    border-radius: 4px 20px 20px 20px;
+  }
+  .conversational-form cf-chat-response.robot thumb {
+    background-color: var(--cf-color-grey);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+  }
+  .conversational-form cf-chat-response.user {   
+    padding-right: 0;
+  }
+  .conversational-form cf-chat-response.user text {
+    color: var(--cf-color-white);
+  }
+  .conversational-form cf-chat-response.user text > p {
+    background: var(--cf-color-black);
+    border-radius: 20px 4px 20px 20px;
+  }
+  .conversational-form cf-chat-response.user thumb {
+    background-color: var(--cf-color-black);
+    background-size: 20px 16px;
+    background-repeat: no-repeat;
+    background-position: 11px 12px;
+  }
+
+  cf-input {
+    background-color: transparent;
+  }
+  .conversational-form cf-input input,
+  .conversational-form cf-input textarea {    
+    width: 100%;
+    border: 2px solid $body-color;
+    font-size: 16px;
+    padding: 12px 10px;
+    padding-right: 70px;
+    border-radius: 9px;
+    height: 56px;
+    color: $body-color;
+    background-color: $white;
+  }
+  @media (min-width: var(--cf-breakpoint-1)) {
+    .conversational-form cf-input input,
+    .conversational-form cf-input textarea {
+      font-size: 16px;
+    }
+  }
+
+  .conversational-form cf-input-button {
+    height: 42px !important;
+    width: 42px !important;
+    top: 50%;
+    bottom: auto !important;
+    right: 15px !important;
+    transform: translateY(-50%) !important;
+    border: none;
+    border-radius: 50% !important;
+  }
+
+  cf-input-button.cf-input-button {
+    background: #23bbbf !important;
+  }
+
+  .conversational-form cf-input-button.microphone-interface {
+    background: var(--cf-color-white);
+  }
+
+  cf-input-button.cf-input-button div.cf-icon-attachment {
+    background-color: #23bbbf;
+  }
+
+  .conversational-form cf-input-button .cf-icon-progress {   
+    background-color: #23bbbf !important;
+    background-image: url("./../img/home/send.svg") !important;
+    background-position: center top;
+  }
+  .conversational-form cf-input-button.loading:after {
+    border: x solid var(--cf-color-green);
+  }
+  .conversational-form cf-input-button .cf-icon-audio {
+    /* background-image: url("data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAYAAAGpAGuzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtlJREFUeNpiUFJSYgDh////M7AwQMB/ZWVlBiYGJADiqACx/N27dxlByu7AZAACiAFqwCeQATA9vDA9KAb8BzGARv8HcRhBHJBpAAHECDIAZjGMAZJA0Y9u1mcg5kEWhJnLC5UEgf1QehFOOwACCFniKBBPBwouQXb8NiC2AuLFyJaDgCc2V+F0Lk4JkGsuYvMHCBhA6QNAQT8QgwUacCBd94DYAYRhUcKAJMkFFPyObDnM199g9gAEELLPMYIGCpYDTYnC5Y1/WHwUic/fjAwEABMDiYBkDaBg2gXErkCcCQom5BCBJQtYLCCH0h8gZgbiJ0Asi6YBFEvnoWxtFiSbQOA2lmAFgQBg0G7EFg/YFIOTKowNEEDYIi4GiKcB8WUgtgYqxvA0MliGFFFWUBsZ8QVrJLp1wNDZRmo8eJCqgZG+SWMQamBBSg64Ms9FYFzwQIu8L0zYkjIasIQmFxA4hqzBD1rEH0ASk4cWI9Oh/GxQ4tMCMq5CBQyB+AKaDY+BWAaI/wI1s4BsuAYqgqGS56F+2gd13n+oYlASZ0EOpXhQJkEy1RFU1UDZd5DzA3Ly3ggNKU6kfM2Inh+YsJR6yIXAf1jmJzviAAIMWxZFBvxAPAeIQ3DIrwHiFKCzP5JjgSe01iIGeAEt2U6qBa+BWIRIC94ALRAlNTOIkBDUIlTLbTTPzqMW0NWCrySY8xVfEXwLiFWRxDSB+AYQdwJxE5EWdEKrTQ0gdR1J/DbIBzPQFM+F0s1AbAvEH/AYDJKzBWayZjS9MDADlpPXAXEgksRbIDYB4gdIYupArAtlg5oSN6EFM8jlCkDmGSAWRlK/HigXhFxUFANxD5oLfkPbJlOhrSFkAArWbCDOAmJWNLkSoOG92MoiUAHfAcRlZCaaLiCuABr+n5jCjhVaXYYCsTMQs6HJ/wLivUC8GoiXAA39TU59gK/9B+snkV3h/CclbJArVrrmZAB+mc1ty+WBKAAAAABJRU5ErkJggg=="); */
+    background-size: 12px 19px;
+    mix-blend-mode: difference;
+  }
+  .conversational-form cf-input-button cf-icon-audio-eq {   
+    border-color: var(--cf-color-black);
+  }
+  .conversational-form .cf-button {
+    color: var(--cf-color-black);
+    border-color: #dddddd;
+    transition: opacity var(--cf-anim-time) var(--anim-easeOut),
+      border-color var(--cf-anim-time) var(--anim-easeOut),
+      color var(--cf-anim-time) var(--anim-easeOut);
+    background: none !important;
+    line-height: 1.2;
+  }
+  .conversational-form .cf-button > div {
+    padding: 14px 24px;
+  }
+  .conversational-form .cf-button cf-radio {   
+    background: var(--cf-color-black-alpha02);
+  }
+  .conversational-form .cf-button.highlight,
+  .conversational-form .cf-button:focus,
+  .conversational-form .cf-button:hover,
+  .conversational-form .cf-button[checked="checked"],
+  .conversational-form .cf-button.selected {
+    border-color: #5e5e5e;
+    color: var(--cf-color-black-alpha02);
+  }
+  .conversational-form .cf-button.highlight cf-radio,
+  .conversational-form .cf-button.highlight cf-radio,
+  .conversational-form .cf-button.highlight cf-radio,
+  .conversational-form .cf-button:focus cf-radio,
+  .conversational-form .cf-button:focus cf-radio,
+  .conversational-form .cf-button:focus cf-radio,
+  .conversational-form .cf-button:hover cf-radio,
+  .conversational-form .cf-button:hover cf-radio,
+  .conversational-form .cf-button:hover cf-radio,
+  .conversational-form .cf-button[checked="checked"] cf-radio,
+  .conversational-form .cf-button[checked="checked"] cf-radio,
+  .conversational-form .cf-button[checked="checked"] cf-radio,
+  .conversational-form .cf-button.selected cf-radio,
+  .conversational-form .cf-button.selected cf-radio,
+  .conversational-form .cf-button.selected cf-radio {
+    background: var(--cf-color-black);
+  }
+  .conversational-form cf-list-button:after {
+    background-image: none;
+    background: rgb(0, 0, 0);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+#cf-context {
+  width: 100%;
+  height: 300px;
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .conversational-form .conversational-form-inner {
+    padding: 0 20px;
+  }
+  .conversational-form:before {
+    background: none;
+  }
+  .home-contact__form {
+    margin-top: 0px;
+  }
+  #cf-context {
+    height: 225px;
+  }
+  .home-contact__content {
+    margin-bottom: 40px;
+  }
+}

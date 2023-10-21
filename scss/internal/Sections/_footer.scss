@@ -1,0 +1,137 @@
+.footer__bottom--section {
+  position: relative;
+  @include poppins-regular();
+  padding: 100px 0;
+  background-color: $footer-color;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &--contents {
+    display: flex;
+    justify-content: space-between;
+
+    .footer__contact li {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+    }
+
+    &--right {
+      text-align: right;
+
+      .quick-links {
+        li {
+          display: inline-block;
+          position: relative;
+
+          &:not(:first-child) {
+            margin-left: 30px;
+
+            &::before {
+              content: "";
+              width: 1px;
+              height: 14px;
+              background-color: $white;
+              position: absolute;
+              left: -15px;
+              top: 3px;
+            }
+          }
+        }
+      }
+
+      .sm-links {
+        margin-top: 40px;
+
+        li {
+          display: inline-block;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-copy {
+  padding: 10px 0;
+  text-align: center;
+  @include manjiri-regular();
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .footer__bottom--section--contents {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer__bottom--section--contents--right {
+    padding-top: 25px;
+  }
+  .sm-links {
+    text-align: left;
+  }
+  .footer__bottom--section--contents--right .sm-links {
+    margin-top: 25px;
+  }
+  .footer__bottom--section--contents--right {
+    text-align: left;
+  }
+  .footer__bottom--section {
+    &--contents {
+      &--right {
+        .quick-links {
+          li {
+            display: block;
+            padding-top: 10px;
+            &:not(:first-child) {
+              margin-left: 0;
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-nav-links {
+  text-align: right;
+  margin-bottom: 60px;
+
+  li {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+@media (max-width: $layout-breakpoint-small) {
+  .footer-nav-links {
+    text-align: left;
+    margin-bottom: 35px;
+  
+    li {
+      display: list-item;
+  
+      &:not(:first-child) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "./partials/fonts";
+@import "./partials/varibles";
+@import "./partials/mixins";
+@import "./partials/base";
+
+
+// Sections
+@import "./Sections/animations";
+@import "./sections/navigaion";
+@import "./Sections/footer.scss";
+@import "./Sections/sections";
+@import "./sections/forms";
+@import "./sections/buttons";
+@import "./Sections/banner";
+
+// Pages
+@import "./pages/home/banner";
+@import "./pages/home/sections";
+@import "./pages/home/conversation-form";
+@import "./pages/services/sections";
+@import "./pages/blog/blog-all";
+@import "./pages/science/sections";
+@import "./pages/about/about";
+@import "./pages/news/news";
+@import "./pages/news/article";
+@import "./pages/contact/contact";
+@import "./pages/products/products";
+
+// Service pages
+@import "./pages/services/service";
+@import "./pages/services/rct";
+@import "./pages/services/hifu";
+@import "./pages/services/ppt";
+@import "./pages/services/lyp";
+@import "./pages/services/thermiva";
+@import "./pages/services/detox";

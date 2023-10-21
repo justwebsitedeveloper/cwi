@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CWI India</title>
+    <link rel="icon" type="image/png" href="./img/logo.ico" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <!-- SIDE MENU POP -->
+    <div class="sidebars">
+        <div class="sidenav-inner">
+            <a href="javascript:void(0)" class="sidenav-closebtn" onclick="closeNav()">&times;</a>
+            <ul class="side-popup">
+                <li><a class="nav-active" href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="sevices.html">Our Services</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="science.html">Our Science</a></li>
+                <li><a href="blog-all.html">Blog</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <div class="appointment-section">
+                <ul class="navbar__right--tops">
+                    <li>
+                        <button class="navbar__right--top--cta" type="button">
+                            Book Appointment
+                        </button>
+                    </li>
+                    <li><a href="#">Join for Health</a></li>
+                    <li><a href="news.html">News & Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="container">
+            <div class="navbar">
+                <a class="navbar-brand" href="/"><img class="nav-logo__lg" src="./img/logo.svg" alt="CWI logo"></a>
+                <div class="navbar__right">
+                    <ul class="navbar__right--top">
+                        <li>
+                            <button class="navbar__right--top--cta" type="button">
+                                Book Appointment
+                            </button>
+                        </li>
+                        <li><a href="#">Join for Health</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                    </ul>
+
+                    <ul class="navbar__right--bottom">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="sevices.html">Our Services</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="science.html">Our Science</a></li>
+                        <li><a href="blog-all.html">Blog</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                    <div class="side-close">
+                        <button class=" btn btn-clear hamburger" onclick="showNav()">☰</button> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="nav-sticky">
+        <div class="container">
+            <div class="navbar">
+                <a class="navbar-brand" href="/"><img class="nav-logo__sm" src="./img/cwi-logo-small.png"
+                        alt="CWI logo"></a>
+                <div class="navbar__right">
+                    <ul class="navbar__right--top">
+                        <li>
+                            <button class="navbar__right--top--cta" type="button">
+                                Book Appointment
+                            </button>
+                        </li>
+                        <li><a href="#">Join for Health</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                    </ul>
+
+                    <ul class="navbar__right--bottom">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="sevices.html">Our Services</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="science.html">Our Science</a></li>
+                        <li><a href="blog-all.html">Blog</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                    <div class="side-close">
+                        <button class=" btn btn-clear hamburger" onclick="showNav()">☰</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="about-modal-header">
+                    <div class="container">
+                        <button class="about-modal-header__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><img src="./img/close.svg" alt=""></button>
+                        <div class="about-modal-header__content">
+                            <img src="./img/about/overlay/profile.png" alt="" width="250px">
+                            <div class="about-modal-header__content-text">
+                                <h2>Dr. Eugene Rajaratnam</h2>
+                                <p>BOARD CERTIFIED UROLOGIST & BOARD CERTIFIED IN ANTI-AGING AND REGENERATIVE MEDICINE
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-modal-body">
+                    <div class="about-modal-body__container">
+                        <div class="about-modal-card">
+                            <img src="./img/about/overlay/graduation.svg" alt="" width="52px">
+                            <h4 class="about-modal-card__title">Graduation</h4>
+                            <p class="about-modal-card__content">
+                                Graduated in 1976 from Stanley Medical College, Chennai India.
+                                Moved to New York and completed a Surgical and Urological Residency in 1982.
+                                Received my Board Certification in 1985.
+                            </p>
+                        </div>
+                        <div class="about-modal-card">
+                            <img src="./img/about/overlay/work.svg" alt="" width="52px">
+                            <h4 class="about-modal-card__title">Work</h4>
+                            <p class="about-modal-card__content">
+                                Worked as an attending Urologist in Brooklyn, NY at Coney Island Hospital until 1988,
+                                then
+                                moved to California.
+                                I have been in Private Practice in
+                                Lancaster since 1988.
+                                Founded The Antelope Valley Impotence and Incontinence Center. We treat all Urological
+                                conditions with special focus on Erectile Dysfunction and Urinary Incontinence.
+                            </p>
+                        </div>
+                        <div class="about-modal-card">
+                            <img src="./img/about/overlay/career.svg" alt="" width="52px">
+                            <h4 class="about-modal-card__title">Career</h4>
+                            <p class="about-modal-card__content">
+                                I was introduced to Age Management Medicine in 2007, initially trained by the Cenegenics
+                                Medical Institute in
+                                Las Vegas, NV.
+                                Since then I have been Board Certified in
+                                Anti-Aging and Regenerative Medicine through A4M.
+                            </p>
+                        </div>
+                        <div class="about-modal-card">
+                            <img src="./img/about/overlay/foundation.svg" alt="" width="52px">
+                            <h4 class="about-modal-card__title">Foundation</h4>
+                            <p class="about-modal-card__content">
+                                I also founded The California Wellness Institute (CWI). It initially started as an
+                                entity in Lancaster with plans to expand to other cities in California and
+                                internationally in the Asia Pacific Region.
+                                The Rajaratnam Foundation has been focusing in fundraising to benefit and assist
+                                underprivileged children in achieving their dreams in the Antelope Valley for the
+                                past 10 years.
+                            </p>
+                        </div>
+                        <div class="about-modal-card">
+                            <img src="./img/about/overlay/otheractivities.svg" alt="" width="52px">
+                            <h4 class="about-modal-card__title">Other Activities</h4>
+                            <p class="about-modal-card__content">
+                                Aside from being a physician I am also an avid pilot, photographer, and have a keen
+                                interest in Commercial Real Estate development. I am currently involved in a non-profit
+                                501(c)(3) foundation.
+                                I Co-Produced the film “High Strung” which was released to theaters in April 2016 and is
+                                now available to stream on Netflix in HD.
+                            </p>
+                        </div>
+                        <div class="about-modal-card">
+                            <img src="./img/about/overlay/latest.svg" alt="" width="52px">
+                            <h4 class="about-modal-card__title">Latest</h4>
+                            <p class="about-modal-card__content">
+                                My latest and current venture is the making of a Health and Wellness TV Program, “Life
+                                and How to Live It”. It will be available for viewing at LifeHowtoLiveIt.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Banner -->
+        <section class="home-banner">
+            <div id="cwi-home-banner" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background: url(./img/home/banner.jpg) center no-repeat">
+                        <img class="home-banner__element" src="./img/home/logo-element.svg" alt="" />
+                        <div class="carousel-content">
+                            <div class="container">
+                                <div class="carousel-content__inner">
+                                    <h1 class="carousel-content__title">
+                                        California Wellness Institute - India
+                                    </h1>
+                                    <h3 class="carousel-content__subtitle">
+                                        Wings for your lives!
+                                    </h3>
+                                    <p>
+                                        We are a holistic, whole-body restoration medical
+                                        practice. Together, we will achieve your ideal health and
+                                        wellness goals.
+                                    </p>
+                                    <a class="carousel-content__cta" href="about.html">Know More
+                                        <img src="./img/home/arrow-black.svg" alt="" height="12px" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="carousel-item" style="background: url(./img/home/banner1.jpg) center no-repeat">
+                        <img class="home-banner__element" src="./img/home/logo-element.svg" alt="" />
+                        <div class="carousel-content">
+                            <div class="container">
+                                <div class="carousel-content__inner">
+                                    <h1 class="carousel-content__title">
+                                        California Well ness Institute - India
+                                    </h1>
+                                    <h3 class="carousel-content__subtitle">
+                                        Wings for your lives!
+                                    </h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Hic, enim? elit. Hic, enim? Lorem ipsum dolor sit amet
+                                        consectetur
+                                    </p>
+                                    <a class="carousel-content__cta" href="">Know More
+                                        <img src="./img/home/arrow-black.svg" alt="" height="12px" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="home-banner__carousel-indicators">
+                    <div class="container">
+                        <ol class="carousel-indicators home-banner__carousel-indicators-list">
+                            <li data-target="#cwi-home-banner" data-slide-to="0" class="active"></li>
+                            <li data-target="#cwi-home-banner" data-slide-to="1"></li>
+                            <li data-target="#cwi-home-banner" data-slide-to="2"></li> 
+                        </ol>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+
+        <!-- About -->
+        <section class="home-about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <span class="section__pre">Wings for your lives!</span>
+                        <h2 class="section__title">California Wellness Institute</h2>
+                        <span class="section__title-stub">INDIA</span>
+                        <p class="section__content">CWI-India offers innovative, patient-focused, anti-aging medical
+                            care to help you achieve your ideal wellness goals. As a physician specially trained in
+                            anti-aging medicine,<span class="cwi-pointer" data-toggle="modal" data-target="#aboutModal">
+                                Eugene C. Rajaratnam</span>, M.D, founded the California Wellness
+                            Institute as
+                            a place where people can discover how to maintain healthy, active and fulfilling lives at
+                            every age. </p>
+                        <a href="./about.html" class="section__cta">Know More <img src="./img/home/green-arrow.svg"
+                                alt=""></a>
+                    </div>
+                    <div class="col-lg-6 about-img">
+                        <img src="./img/home/about-img.png" alt="">
+                    </div>
+                </div>
+        </section>
+
+        <!-- Services -->
+        <section class="home-services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <span class="section__pre">Wings for your lives!</span>
+                        <h2 class="section__title white">Our Service</h2>
+                        <p class="section__content white">The California Wellness Institute team is dedicated to helping
+                            you optimize your health and live&nbsp;better</p>
+                        <p class="section__content white">Our team offers a full suite of health and wellness treatments
+                            aimed at addressing the nutritional, hormonal, physical, and lifestyle that may be standing
+                            in the way of you living your best life. From our comprehensive Living Younger program to
+                            individual medical treatments.
+                        </p>
+                        <a href="./sevices.html" class="section__cta white">Know More <img
+                                src="./img/home/green-arrow.svg" alt=""></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="home-services__accordian">
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian1" type="radio" checked name="accord">
+                                <label for="home-services__accordian1"
+                                    style="background: url(./img/home/services/cell-therapy.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">Exosome Cell Therapy</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/cell-therapy.jpg" alt=""
+                                        class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">Exosome Cell Therapy</h4>
+                                        <p class="home-services__card-content-body">Exosome therapy activates the body's
+                                            own
+                                            repair systems to promote healing, reduce pain, and slow the aging process
+                                            for
+                                            myriad
+                                            joint and soft-tissue conditions.</p>
+                                        <a href='./service/regenerative-cell-therapy.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian2" type="radio" name="accord">
+                                <label for="home-services__accordian2"
+                                    style="background: url(./img/home/services/lyp.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">Living Younger Program</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/lyp.jpg" alt="" class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">Living Younger Program </h4>
+                                        <p class="home-services__card-content-body">
+                                            Anti-aging techniques to help you stay (or become) healthier and feel more
+                                            youthful. While there are aspects of aging that are beyond our control,
+                                            there are many ways we can age without "becoming old".
+                                        </p>
+                                        <a href='./service/live-younger.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian3" type="radio" name="accord">
+                                <label for="home-services__accordian3"
+                                    style="background: url(./img/home/services/platelet.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">Platelet Rich Plasma (PRP) </h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/platelet.jpg" alt=""
+                                        class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">Platelet Rich Plasma (PRP) </h4>
+                                        <p class="home-services__card-content-body">
+                                            Platelet-rich plasma injections stimulate a patient's own body to grow new
+                                            cells. This therapy is a proven method for treating orthopedic injuries,
+                                            arthritis and a variety of other conditions.
+                                        </p>
+                                        <a href='./service/platelet-plasma-therapy.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian4" type="radio" name="accord">
+                                <label for="home-services__accordian4"
+                                    style="background: url(./img/home/services/nutrient.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">IV Nutrient Therapy</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/nutrient.jpg" alt=""
+                                        class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">IV Nutrient Therapy </h4>
+                                        <p class="home-services__card-content-body">
+                                            A healthy balance of nutrients, vitamins and minerals are essential to
+                                            feel and perform at your best. IV nutrient therapy can help replenish
+                                            the elements you need for optimal wellness.
+                                        </p>
+                                        <a href='./service/nutrient.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian5" type="radio" name="accord">
+                                <label for="home-services__accordian5"
+                                    style="background: url(./img/home/services/hydrotherpay.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">Colon Hydrotherapy</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/hydrotherpay.jpg" alt=""
+                                        class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">Colon Hydrotherapy</h4>
+                                        <p class="home-services__card-content-body">
+                                            A healthy gut is essential for overall health. Colonic hydrotherapy can help
+                                            you feel your best.
+                                        </p>
+                                        <a href='./service/hydrotherapy.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian6" type="radio" name="accord">
+                                <label for="home-services__accordian6"
+                                    style="background: url(./img/home/services/detox.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">Organ Detoxification</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/detox.jpg" alt="" class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">Organ Detoxification</h4>
+                                        <p class="home-services__card-content-body">
+                                            Toxins are all around us and can build up in your body and impair your
+                                            health. Organ detoxification can rid your body of these deadly toxins.
+                                        </p>
+                                        <a href='./service/detox.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian7" type="radio" name="accord">
+                                <label for="home-services__accordian7"
+                                    style="background: url(./img/home/services/hifu.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">HiFU (High-intensity Frequency Ultrasound)</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/hifu.jpg" alt="" class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">High-intensity Frequency
+                                            Ultrasound</h4>
+                                        <p class="home-services__card-content-body">
+                                            HiFU is a non-invasive, outpatient procedure to treat certain prostate
+                                            cancers. It allows men to quickly resume their regular activities without
+                                            the risks and side effects of more invasive treatments.</p>
+                                        <a href='./service/hifu.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="home-services__card">
+                                <input id="home-services__accordian8" type="radio" name="accord">
+                                <label for="home-services__accordian8"
+                                    style="background: url(./img/home/services/harmone.jpg) rgb(0 , 28,  40 ,  .9);"></label>
+                                <h3 class="home-services__card-title">Bioidentical Hormone Replacement Therapy</h3>
+                                <article class="home-services__card-content">
+                                    <img src="./img/home/services/harmone.jpg" alt="" class="home-services__card-image">
+                                    <div class="home-services__card-content-inner">
+                                        <h4 class="home-services__card-content-title">Bioidentical Hormone Replacement
+                                            Therapy</h4>
+                                        <p class="home-services__card-content-body">
+                                            Bioidentical hormone replacement therapy uses natural hormones to address
+                                            hormonal imbalances and restore health and vitality.
+                                        </p>
+                                        <a href='./service/hormone-replacement.html' role="link"
+                                            class="home-services__card-content-cta"><img
+                                                src="./img/home/green-arrow.svg" alt=""></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Next gen medicines -->
+
+        <section class="home-prods">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <span class="section__pre">The next generation of biologic medicines</span>
+                        <h2 class="section__title">Organicell & Mayo Clinic</h2>
+                        <p class="section__content">We are bringing the best services from South Florida, Organicell and
+                            Mayo Clinic is a publicly traded biotechnology company committed to the research,
+                            development and manufacture of new biologic medicine, with a focus on current and potential
+                            regenerative therapeutics. </p>
+                        <a href="./products.html" class="section__cta">View All Products <img
+                                src="./img/home/green-arrow.svg" alt=""></a>
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="home-prods__display">
+                            <div class="home-prods__display-prod">
+                                <span class="home-prods__display-prod-tag">CWI</span>
+                                <img src="./img/home/factorx.jpg" alt="">
+                                <div class="home-prods__display-prod-content">
+                                    <h4>Factor X</h4>
+                                    <p>Factor X has a large spectrum of growth factors and exosome components that may
+                                        help promote tissue regeneration.</p>
+                                </div>
+                            </div>
+                            <div class="home-prods__display-prod">
+                                <span class="home-prods__display-prod-tag">Organicell</span>
+                                <img src="./img/home/zofin.jpg" alt="">
+                                <div class="home-prods__display-prod-content">
+                                    <h4>Zofin X</h4>
+                                    <p>Zofin is a nanoparticle based therapeutic showing tremendous promise in the
+                                        battle against COVID-19. </p>
+                                </div>
+                            </div>
+                            <div class="home-prods__display-prod">
+                                <span class="home-prods__display-prod-tag">Mayo clinic</span>
+                                <img src="./img/home/nutrilean.jpg" alt="">
+                                <div class="home-prods__display-prod-content">
+                                    <h4>Nutrilean</h4>
+                                    <p>Nutrilean is a capsule used to breaks down stored fat to be used for energy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- News and events -->
+        <!--
+        <section class="home-news">
+            <div class="container">
+                <span class="section__pre">Know our latest updates and news</span>
+                <div class="d-flex">
+                    <h2 class="section__title">News & Events</h2>
+                    <a href="./news.html" class="section__cta mt-0"><img src="./img/home/green-arrow.svg" alt=""></a>
+                </div>
+
+                <div class="home-news__cards">
+                    <span class="section__pre">News articles coming soon</span>
+                     <div class="card home-news__card">
+                        <img src="./img/home/news1.jpg" alt="" class="card-img-top">
+                        <div class="card-body home-news__card-body">
+                            <h4 class="home-news__card-title">The COVID Solution</h4>
+                            <p class="home-news__card-content">Zofin is a nanoparticle based therapeutic showing
+                                tremendous promise in the battle against COVID-19. Zofin is derived from perinatal
+                                sources and is manufactured to retain the naturally occurring microRNAs, without the
+                                addition or combination of any other substance or diluent.</p>
+                            <a href="#" class="home-news__card-cta">Read More <img src="./img/home/green-arrow.svg"
+                                    alt=""></a>
+                        </div>
+                    </div>  
+                    <div class="card home-news__card">
+                        <img src="./img/home/news2.jpg" alt="" class="card-img-top">
+                        <div class="card-body home-news__card-body">
+                            <h4 class="home-news__card-title">Boost Energy and Immunity</h4>
+                            <p class="home-news__card-content">Healthy fats, like those found in olive oil and salmon,
+                                may boost your body's immune response to pathogens by decreasing inflammation. Although
+                                low-level inflammation is a normal response to stress or injury, chronic inflammation
+                                can suppress your immune system </p>
+                            <a href="#" class="home-news__card-cta">Read More <img src="./img/home/green-arrow.svg"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="card home-news__card">
+                        <img src="./img/home/news3.jpg" alt="" class="card-img-top">
+                        <div class="card-body home-news__card-body">
+                            <h4 class="home-news__card-title">5 Benefits of hormone replacement</h4>
+                            <p class="home-news__card-content">Estrogen is a hormone that’s naturally produced by your
+                                body. It’s found in both men and women. Estrogen plays an important role in managing
+                                your reproductive system, but it also protects your bones and helps your skin heal from
+                                bruises and injury.</p>
+                            <a href="#" class="home-news__card-cta">Read More <img src="./img/home/green-arrow.svg"
+                                    alt=""></a>
+                        </div>
+                    </div> -->
+        </div>
+        </div>
+        </section>
+
+
+        <!-- Testimonials -->
+
+        <!-- <section class="home-testimonials">
+            <div class="container">
+                <span class="section__pre">California Wellness Institute</span>
+                <h2 class="section__title">Testimonials</h2>
+            </div>
+
+            <div class="container">
+                <div class="home-testimonials__carousel owl-carousel owl-theme">
+                    <div class="home-testimonial">
+                        <div class="home-testimonial__image" style="background: url(./img/home/review1.png);"></div>
+                        <div class="home-testimonial__content">
+                            <h4 class="home-testimonial__content-name">Gwen G.</h4>
+                            <p class="home-testimonial__content-para">
+                                Great service! Professional, knowledgeable and
+                                friendly staff. I've been to a few different places in town and this is my favorite. The
+                                facility is very clean and, it's in a great location.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-testimonial">
+                        <div class="home-testimonial__image" style="background: url(./img/home/review3.png);"></div>
+                        <div class="home-testimonial__content">
+                            <h4 class="home-testimonial__content-name">Michelle D.</h4>
+                            <p class="home-testimonial__content-para">
+                                The medically supervised weight-loss program has absolutely changed my life! I have
+                                struggled with weight gain and digestive issues for years. After working with Carol, I
+                                have
+                                more energy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-testimonial">
+                        <div class="home-testimonial__image" style="background: url(./img/home/review2.png);"></div>
+                        <div class="home-testimonial__content">
+                            <h4 class="home-testimonial__content-name">Thameen</h4>
+                            <p class="home-testimonial__content-para">
+                                Great service! Professional, knowledgeable and friendly staff. I've been to a few
+                                different
+                                places in town and this is my favorite. The facility is very clean and, it's in a great
+                                location.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-testimonial">
+                        <div class="home-testimonial__image" style="background: url(./img/home/review3.png);"></div>
+                        <div class="home-testimonial__content">
+                            <h4 class="home-testimonial__content-name">Thameen</h4>
+                            <p class="home-testimonial__content-para">
+                                Great service! Professional, knowledgeable and friendly staff. I've been to a few
+                                different
+                                places in town and this is my favorite. The facility is very clean and, it's in a great
+                                location.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <section class="home-contact">
+            <div class="container">
+                <div class="row justify-content-end align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="home-contact__content">
+                            <span class="section__pre">Wings for your lives!</span>
+                            <h2 class="section__title">Book an Appointment</h2>
+                            <div class="home-contact__form">
+                                <!-- <label for="name">Enter your name</label>
+                                <input type="text" id="name">
+                                <button type="button" class="home-contact__form-button"><img src="./img/home/send.png"
+                                        alt="" width="30px"></button> -->
+                                <form id="conversation-form" class="home-contact__form-form">
+                                    <fieldset>
+                                        <label for="name">First Name</label>
+                                        <input required cf-questions="Hello?&&Please tell me your first name."
+                                            type="text" class="form-control" name="firstname" id="firstname"
+                                            cf-input-placeholder="First Name" required />
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="name">Last name</label>
+                                        <input required cf-questions="Hi {firstname}, Please tell me your last name."
+                                            type="text" class="form-control" name="lastname" id="lastname"
+                                            cf-input-placeholder="Last Name" required />
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="email">Email</label>
+                                        <input pattern=".+\@.+\..+" cf-error="Please check you email format"
+                                            cf-input-placeholder="email"
+                                            cf-questions="Hi {firstname} {lastname}, please tell me your email?"
+                                            type="email" class="form-control" name="email" id="your-email" required>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="phone">Phone Number</label>
+                                        <input cf-questions="What is your phone number?" type="number"
+                                            class="form-control" name="phone" id="phone"
+                                            cf-input-placeholder="Phone number" required>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="message">Message</label>
+                                        <input cf-questions="What would you like to tell us?" type="text"
+                                            class="form-control" name="message" id="message"
+                                            cf-input-placeholder="Message" required>
+                                    </fieldset>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                </form>
+                                <div id="cf-context" class="home-contact__form-context" role="cf-context" cf-context>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer__bottom--section">
+
+            <div class="container">
+                <ul class="footer-nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="sevices.html">Our Services</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="science.html">Our Science</a></li>
+                    <li><a href="blog-all.html">Blog</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="container footer__bottom--section--contents">
+                <ul class="footer__contact">
+                    <li>
+                        <img src="./img/home/compass.png" alt="" width="24px" height="24px" />86/59, Second Street
+                        Aspiran Garden, Kilpauk, Chennai - 600010
+                    </li>
+                    <li>
+                        <img src="./img/home/mail-footer.png" alt="" width="24px" height="24px" />sales@california.com
+                    </li>
+                    <li>
+                        <img src="./img/home/phone.png" alt="" width="24px" height="24px" />+91 4426476522
+                    </li>
+                </ul>
+                <div class="footer__bottom--section--contents--right">
+                    <ul class="quick-links">
+                        <li><a href="#">Book Appointment</a></li>
+                        <li><a href="#">Join for Health</a></li>
+                        <li><a href="./news.html">News & Events</a></li>
+                    </ul>
+                    <ul class="sm-links">
+                        <li>
+                            <a href="#" role="link"><img src="./img/home/facebook.png" alt="Facebook" width="35px"
+                                    height="35px" /></a>
+                        </li>
+                        <li>
+                            <a href="#" role="link"><img src="./img/home/instagram.png" alt="Instagram" width="35px"
+                                    height="35px" /></a>
+                        </li>
+                        <li>
+                            <a href="#" role="link"><img src="./img/home/linkedin.png" alt="Linkedin" width="35px"
+                                    height="35px" /></a>
+                        </li>
+                        <li>
+                            <a href="#" role="link"><img src="./img/home/twitter.png" alt="Twitter" width="35px"
+                                    height="35px" /></a>
+                        </li>
+                        <li>
+                            <a href="#" role="link"><img src="./img/home/youtube.png" alt="youtube" width="35px"
+                                    height="35px" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy">copyrights@cwi2020</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src='./js/convo-form.js'></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
